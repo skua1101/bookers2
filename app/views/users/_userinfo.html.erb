@@ -1,0 +1,19 @@
+<!--User infoの部分テンプレート-->
+
+<h2>User info</h2>
+  <thead>
+    <tr>
+       <%= image_tag @user.get_profile_image("100x100") %>
+    </tr>
+  </thead>
+
+  <table class="table">
+    <tbody>
+      <tr>
+        <th>name</th> <!--ユーザー名表示-->
+      </tr>
+      <tr>
+        <th>introduction</th> <!--自己紹介文-->
+      </tr>
+     </tbody>
+  </table>
