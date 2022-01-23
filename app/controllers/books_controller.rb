@@ -13,8 +13,8 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-        @user = User.find(current_user.id) #ログインしているユーザー
-        @book = Book.new #新規投稿の部分テンプレート
+    @user = User.find(current_user.id) #ログインしているユーザー
+    @book = Book.new #新規投稿の部分テンプレート
   end
 
   def show
@@ -35,6 +35,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.permit(:title, :body)
+    params.require(:book).permit(:title, :body)
   end
 end

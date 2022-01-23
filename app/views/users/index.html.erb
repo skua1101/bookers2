@@ -5,5 +5,24 @@
     <%= render 'books/newbook', book: @book %> <!--New bookの部分テンプレート-->
   </div>
 </div>
-<h1>Users#index</h1>
+<h1>Users</h1>
+
+<table class="table table-sm user-index">
+<h2>Users</h2>
+  <thead>
+    <th>image</th>
+    <th>name</th>
+    <th></th>
+  </thead>
+
+  <tbody>
+  	<% @users.each do |user| %>
+	  	<tr>
+	  	  <td><%= image_tag @user.get_profile_image("100x100") %></td>
+	  	  <td><%= user.name %></td>
+	  	  <td><%= link_to "Show", "/users/#{user.id}" %></td>
+	  	</tr>
+  	<% end %>
+  </tbody>
+</table>
 

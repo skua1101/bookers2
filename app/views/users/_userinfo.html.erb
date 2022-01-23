@@ -10,10 +10,15 @@
   <table class="table">
     <tbody>
       <tr>
-        <th>name</th> <!--ユーザー名表示-->
+        <th>name</th>
+        <th><%= user.name %></th><!--ユーザー名表示-->
       </tr>
       <tr>
-        <th>introduction</th> <!--自己紹介文-->
+        <th>introduction</th><!--自己紹介文-->
+        <th><%= user.introduction %></th>
       </tr>
+      <div class="row"> <!--編集画面へ-->s
+        <%= link_to "edit", edit_user_path(current_user) %>
+      </div>
      </tbody>
   </table>
