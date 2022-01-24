@@ -17,8 +17,14 @@
         <th>introduction</th><!--自己紹介文-->
         <th><%= user.introduction %></th>
       </tr>
-      <div class="row"> <!--編集画面へ-->s
-        <%= link_to "edit", edit_user_path(current_user) %>
-      </div>
+
+      <tr>
+        <th colspan="2">
+         <!--編集画面へ-->
+           <%= link_to  edit_user_path(user) ,class:"btn btn-out-line-secondary btn-block" do %>
+            <span class="fas fa-user-cog" aria-hidden="true"></span>
+           <% end %>
+        </th>
+      </tr>
      </tbody>
   </table>
